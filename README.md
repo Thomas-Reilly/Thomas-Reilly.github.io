@@ -1,1 +1,1 @@
-This is a ReadMe file. ligma.
+This is a ReadMe file.
