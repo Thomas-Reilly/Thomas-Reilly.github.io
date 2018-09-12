@@ -1,0 +1,88 @@
+h3.head {
+  text-align: center;
+
+  background-color: rgb(170,170,170);
+  margin-left: auto;
+  margin-right: auto;
+  width: 190px;
+  padding:1px;
+
+  border-style: solid;
+  border-color: rgb(254,248,81);
+  border-radius: 10px;
+  border-width: 10px;
+}
+
+body {
+  background-color: rgb(119,170,68);
+}
+
+p.main {
+  font-family: Times, Arial, serif;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  font-style: italic;
+  line-height: 1.1em;
+  letter-spacing: .05em;
+  word-spacing: .05em;
+  text-shadow: 1px 0.5px;
+
+  background-color: rgb(204,205,221);
+  width: 450px;
+  height: 200px;
+
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+}
+
+div.horizontalList {
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.p{
+  background-color: rgb(171,202,188);
+  width: 500px;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 75px;
+  padding-bottom: 50px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+div.p:hover {
+  background-color: red;
+}
+
+ul {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+li {
+  display: inline;
+  background-color: rgb(187,187,220);
+  padding: 2px;
+  border-style: dotted;
+  border-color: red;
+  border-width: 2px;
+  margin: 5px;
+}
+
+a.special:hover {
+  color: orange;
+  text-decoration: none;
+}
+
+h2 {
+  text-align: center;
+}
