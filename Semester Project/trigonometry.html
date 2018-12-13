@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Trigonometry</title>
+		<style>
+			body {
+				text-align: center;
+			}
+			div {
+				margin-left: auto;
+				margin-right: auto;
+				padding: 0;
+				display: inline;
+				width: 250px;
+				text-align: center;
+			}
+			.holder {
+				width: 600px;
+				height: 600px;
+			}
+			.inputContainer {
+				margin: 10px;
+				width: 300px;
+			}
+			.inputRow {
+				display: inline-block;
+				width: 600px;
+				margin: 10px;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<h2>Triangle Solver</h2>
+
+		<div class="holder">
+			<p>Enter at least three values to solve the triangle. At least one
+				<u>must</u> be a side.</p>
+
+			<div class="inputRow">
+				<div class="inputContainer">
+					<label for="aSide">A side length: </label>
+					<input type="text" name="aSide" id="aSide" class="textInput" value="0" onClick="this.select();"/>
+				</div>
+				<div class="inputContainer">
+					<label for="aAngle">A angle measure: </label>
+					<input type="text" name="aAngle" id="aAngle" class="textInput" value="0" onClick="this.select();"/>
+				</div>
+			</div>
+
+			<div class="inputRow">
+				<div class="inputContainer">
+					<label for="bSide">B side length: </label>
+					<input type="text" name="bSide" id="bSide" class="textInput" value="0" onClick="this.select();"/>
+				</div>
+				<div class="inputContainer">
+					<label for="bAngle">B angle measure: </label>
+					<input type="text" name="bAngle" id="bAngle" class="textInput" value="0" onClick="this.select();"/>
+				</div>
+			</div>
+
+			<div class="inputRow">
+				<div class="inputContainer">
+					<label for="cSide">C side length: </label>
+					<input type="text" name="cSide" id="cSide" class="textInput" value="0" onClick="this.select();"/>
+				</div>
+				<div class="inputContainer">
+					<label for="cAngle">C angle measure: </label>
+					<input type="text" name="cAngle" id="cAngle" class="textInput" value="0" onClick="this.select();"/>
+				</div>
+			</div>
+
+			<div class="inputRow">
+				<button onclick="iterate()">Solve</button>
+			</div>
+		</div>
+
+
+
+		<div class="holder">
+			<table>
+				
+			</table>
+		</div>
+
+
+
+
+
+		<script src="trigonometry.js"></script>
+
+	</body>
+</html>
