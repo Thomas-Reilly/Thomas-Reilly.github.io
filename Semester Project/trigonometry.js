@@ -180,6 +180,36 @@ function sss() {
 
 
 function displaySolution() {
+  document.getElementById("aaMeasure").textContent = aa.v;
+  document.getElementById("asMeasure").textContent = as.v;
 
-  
+  document.getElementById("baMeasure").textContent = ba.v;
+  document.getElementById("bsMeasure").textContent = bs.v;
+
+  document.getElementById("caMeasure").textContent = ca.v;
+  document.getElementById("csMeasure").textContent = cs.v;
 }
+
+
+
+
+
+
+
+
+// event listener to make display table highlight on mouse hover
+function highlight() {
+  this.style.backgroundColor = "#87ceeb";
+}
+function unhighlight() {
+  this.style.backgroundColor = "white";
+}
+
+var dRows = document.getElementsByClassName("displayRow");
+dRows[0].addEventListener('mouseover', highlight, false);
+dRows[1].addEventListener('mouseover', highlight, false);
+dRows[2].addEventListener('mouseover', highlight, false);
+
+dRows[0].addEventListener('mouseout', unhighlight, false);
+dRows[1].addEventListener('mouseout', unhighlight, false);
+dRows[2].addEventListener('mouseout', unhighlight, false);
