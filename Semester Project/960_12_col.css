@@ -406,8 +406,15 @@ li.ordered {
   display: list-item;
   text-align: left;
   }
+li.neat {
+  display: list-item;
+  text-align: left;
+  padding: 0px;
+  }
 ul.circles {
   list-style-type: circle;
+  margin-left: auto;
+  margin-right: auto;
   }
 @keyframes horizontalShuffle {
   0%   {left:-400px;}
@@ -498,4 +505,52 @@ figure {
   padding: 10px;
   padding-right: 6.4px;
   background-color:brown;
+}
+
+#lightBackground {
+ background-color: lightblue;
+}
+#darkBackground {
+  background-color: #3266aa;
+}
+.displayTable {
+  max-height: 600px;
+  max-width: 600px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  border-style: solid;
+  border-width: 4px;
+  border-color: black;
+
+  border-spacing: 10px;
+}
+.tableHead {
+  text-align: center;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: bold;
+
+  border-top: 2px solid black;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  border-bottom: 3px solid black;
+
+  padding-left: 6px;
+  padding-right: 6px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.displayItem {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+
+  border-width: 2px;
+  border-style: solid;
+  border-color: black;
+
+  text-align: center;
 }

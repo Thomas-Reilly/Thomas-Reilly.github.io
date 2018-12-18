@@ -7,12 +7,12 @@ var ctx = canvas.getContext("2d");
 // clear the canvas then create the x-axis and y-axis
 function resetCanvas() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-  ctx.moveTo(400, 0);
-  ctx.lineTo(400, 800);
+  ctx.moveTo(300, 0);
+  ctx.lineTo(300, 600);
   ctx.stroke();
 
-  ctx.moveTo(0, 400);
-  ctx.lineTo(800, 400);
+  ctx.moveTo(0, 300);
+  ctx.lineTo(600, 300);
   ctx.stroke();
 }
 
@@ -34,7 +34,7 @@ function mapRange (value, a, b, c, d) {
 // the main function to graph the polynomial
 function iterate(a, b, c) {
   for (var i = -10; i < 10; i+= 0.0001) {
-    drawPixel(mapRange(i, -10, 10, 0, 800), mapRange(calc(i, a, b, c), 10, -10, 0, 800));
+    drawPixel(mapRange(i, -10, 10, 0, 600), mapRange(calc(i, a, b, c), 10, -10, 0, 600));
   }
 }
 

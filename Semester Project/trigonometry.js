@@ -1,13 +1,13 @@
-
+// NOTE: Only SSS is functional at this time.
 
 
 // create the variables and assign elements
 var aSide = document.getElementById("aSide");
-var aAngle = document.getElementById("aAngle");
+// var aAngle = document.getElementById("aAngle");
 var bSide = document.getElementById("bSide");
-var bAngle = document.getElementById("bAngle");
+// var bAngle = document.getElementById("bAngle");
 var cSide = document.getElementById("cSide");
-var cAngle = document.getElementById("cAngle");
+// var cAngle = document.getElementById("cAngle");
 
 // create objects
 var aa = new Object();
@@ -29,13 +29,14 @@ function iterate() {
 
 // update v of vars when Solve button clicked
 function updateData() {
-  aa.v = aAngle.value * 1;
-  ba.v = bAngle.value * 1;
-  ca.v = cAngle.v * 1;
+  // aa.v = aAngle.value * 1;
+  // ba.v = bAngle.value * 1;
+  // ca.v = cAngle.v * 1;
   as.v = aSide.value * 1;
   bs.v = bSide.value * 1;
   cs.v = cSide.value * 1;
 
+/*
   if (aa.v == 0) {
     aa.k = false;
   }
@@ -56,7 +57,7 @@ function updateData() {
   else {
     ca.k = true;
   }
-
+*/
   if (as.v == 0) {
     as.k = false;
   }
@@ -96,6 +97,7 @@ function determine() {
   if (as.k && bs.k && cs.k) {
     return ["SSS"];
   }
+/* Only SSS works.
 
   // now test for all AAS possibilities
   else if (aa.k && ba.k && cs.k) {
@@ -138,7 +140,7 @@ function determine() {
   else if (ca.k && ba.k && cs.k) {
     return ["AAS", "c"];
   }
-
+*/
 
 }
 
@@ -147,12 +149,14 @@ function determine() {
 function solve(ty) {
   if (ty[0] == "SSS")
     sss();
+/*
   else if (ty[0] == "SAS")
     sas(ty[1]);
   else if (ty[0] == "AAS")
     aas(ty[1]);
   else if (ty[0] == "ASA")
     aas(ty[1]);
+*/
 }
 
 // solve a SSS triangle using law of cosines
@@ -202,7 +206,7 @@ function highlight() {
   this.style.backgroundColor = "#87ceeb";
 }
 function unhighlight() {
-  this.style.backgroundColor = "white";
+  this.style.backgroundColor = "#3266aa";
 }
 
 var dRows = document.getElementsByClassName("displayRow");

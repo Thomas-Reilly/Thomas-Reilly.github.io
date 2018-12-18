@@ -2,69 +2,59 @@
 
 <html>
 	<head>
-		<title>Polynomials</title>
-		<style>
-			body {
-				text-align: center;
-			}
-			div {
-				margin-left: auto;
-				margin-right: auto;
-				padding: 0;
-				display: inline;
-				width: 250px;
-				text-align: center;
-			}
-			.canvasContainer {
-				display: block;
-				width: 800px;
-				height: 800px;
-			}
-			.sliderContainer {
-				height: 25px;
-				width: 100px;
-				display: inline-block;
-				margin: 20px;
-				padding: 0;
-			}
-			.slidersHolder {
-				width: 800px;
-				display: block;
-				margin-left: auto;
-				margin-right: auto;
-			}
-		</style>
+		<title>Polynomial Grapher</title>
+		<link href="960_12_col.css" type="text/css" rel="stylesheet" />
 	</head>
 
 	<body>
 
-		<div class="canvasContainer">
-			<canvas id="myCanvas" width="800" height="800" style="border:2px solid blue; "></canvas>
-		</div>
+		<div class="container_12 clearfix">
 
-		<div>
-			<p>Graphing polynomial of the form:</p>
-			<p>y = ax<sup>2</sup> + bx + c</p>
-		</div>
+      <div id="nav" class="grid_12">
+        <ul>
+          <li class="nav"><a href="homePage.html">Home</a></li>
+          <li class="nav"><a href="polynomials.html">Polynomials</a></li>
+          <li class="nav"><a href="trigonometry.html">Trigonometry</a></li>
+        </ul>
+      </div>
 
-		<div class="slidersHolder">
-			<div class="sliderContainer">
-				<input type="range" min="-10" max="10" step="1" value="1" id="sliderA">
-				<p>a = <span id="aValue"></span></p>
+      <div id="header" class="grid_12">
+        <h1>Polynomial Grapher</h1>
+      </div>
+
+			<div class="grid_8">
+				<canvas id="myCanvas" width="600" height="600" style="border:2px solid blue; "></canvas>
 			</div>
 
-			<div class="sliderContainer">
-				<input type="range" min="-10" max="10" step="1" value="0" id="sliderB">
-				<p>b = <span id="bValue"></span></p>
+
+			<div class="grid_4">
+				<div class="grid_4">
+					<p>Graphing polynomial of the form:</p>
+					<p>y = ax<sup>2</sup> + bx + c</p>
+				</div>
+				<div class="grid_4">
+					<input type="range" min="-10" max="10" step="1" value="1" id="sliderA">
+					<p>a = <span id="aValue"></span></p>
+				</div>
+
+				<div class="grid_4">
+					<input type="range" min="-10" max="10" step="1" value="0" id="sliderB">
+					<p>b = <span id="bValue"></span></p>
+				</div>
+
+				<div class="grid_4">
+					<input type="range" min="-10" max="10" step="1" value="0" id="sliderC">
+					<p>c = <span id="cValue"></span></p>
+				</div>
 			</div>
 
-			<div class="sliderContainer">
-				<input type="range" min="-10" max="10" step="1" value="0" id="sliderC">
-				<p>c = <span id="cValue"></span></p>
-			</div>
+			<div id="footer" class="grid_12">
+        <p>&copy Copyright 2018</p>
+        <p>All Rights Reserved.</p>
+      </div>
+
+
 		</div>
-
-
 
 		<script src="polynomials.js"></script>
 	</body>

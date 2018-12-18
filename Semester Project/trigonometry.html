@@ -3,153 +3,115 @@
 <html>
 	<head>
 		<title>Trigonometry</title>
-		<style>
-			body {
-				text-align: center;
-			}
-			div {
-				margin-left: auto;
-				margin-right: auto;
-				padding: 0;
-				display: inline;
-				width: 250px;
-				text-align: center;
-			}
-			.holder {
-				width: 600px;
-				height: 600px;
-			}
-			.inputContainer {
-				margin: 10px;
-				width: 300px;
-			}
-			.inputRow {
-				display: inline-block;
-				width: 600px;
-				margin: 10px;
-			}
-			.displayTable {
-				max-height: 600px;
-			  max-width: 600px;
-
-			  margin-left: auto;
-			  margin-right: auto;
-
-			  border-style: solid;
-			  border-width: 4px;
-			  border-color: black;
-
-			  border-spacing: 10px;
-			}
-			.tableHead {
-				text-align: center;
-			  font-size: 20px;
-			  font-style: italic;
-			  font-weight: bold;
-
-			  border-top: 2px solid black;
-			  border-left: 2px solid black;
-			  border-right: 2px solid black;
-			  border-bottom: 3px solid black;
-
-			  padding-left: 6px;
-			  padding-right: 6px;
-			  padding-top: 10px;
-			  padding-bottom: 10px;
-			}
-			.displayItem {
-				padding-left: 10px;
-			  padding-right: 10px;
-			  padding-top: 8px;
-			  padding-bottom: 8px;
-
-			  border-width: 2px;
-			  border-style: solid;
-			  border-color: black;
-
-				text-align: center;
-			}
-		</style>
+		<link href="960_12_col.css" type="text/css" rel="stylesheet" />
 	</head>
 
 	<body>
 
-		<h2>Triangle Solver</h2>
 
-		<div class="holder">
-			<img src="triangle.gif" alt="triangle" title="triangle" align="center"/>
-		</div>
+		<div class="container_12 clearfix">
 
+			<div id="nav" class="grid_12">
+        <ul>
+          <li class="nav"><a href="homePage.html">Home</a></li>
+          <li class="nav"><a href="polynomials.html">Polynomials</a></li>
+          <li class="nav"><a href="trigonometry.html">Trigonometry</a></li>
+        </ul>
+      </div>
 
-		<div class="holder">
-			<p>Enter at least three values to solve the triangle. At least one
-				<u>must</u> be a side.</p>
+			<div id="header" class="grid_12">
+        <h1>Triangle Solver</h1>
+      </div>
 
-			<div class="inputRow">
-				<div class="inputContainer">
-					<label for="aSide">a side length: </label>
-					<input type="text" name="aSide" id="aSide" class="textInput" value="0" onClick="this.select();"/>
-				</div>
-				<div class="inputContainer">
-					<label for="aAngle">A angle measure: </label>
-					<input type="text" name="aAngle" id="aAngle" class="textInput" value="0" onClick="this.select();"/>
-				</div>
+			<div class="grid_4 section" id="darkBackground"></div>
+
+			<div class="grid_4 section" id="lightBackground">
+				<img src="triangle.gif" alt="triangle" title="triangle" align="center"/>
 			</div>
 
-			<div class="inputRow">
-				<div class="inputContainer">
-					<label for="bSide">b side length: </label>
-					<input type="text" name="bSide" id="bSide" class="textInput" value="0" onClick="this.select();"/>
-				</div>
-				<div class="inputContainer">
-					<label for="bAngle">B angle measure: </label>
-					<input type="text" name="bAngle" id="bAngle" class="textInput" value="0" onClick="this.select();"/>
-				</div>
-			</div>
+			<div class="grid_4 section" id="darkBackground"></div>
 
-			<div class="inputRow">
-				<div class="inputContainer">
-					<label for="cSide">c side length: </label>
-					<input type="text" name="cSide" id="cSide" class="textInput" value="0" onClick="this.select();"/>
+
+			<div class="grid_12 height_300">
+				<p>Enter three side lengths to find the angle measures.</p>
+
+				<div class="grid_12">
+					<div class="grid_12 article" id="darkBackground">
+						<label for="aSide">a side length: </label>
+						<input type="text" name="aSide" id="aSide" class="textInput" value="0" onClick="this.select();"/>
+					</div>
+<!--
+					<div class="inputContainer">
+						<label for="aAngle">A angle measure: </label>
+						<input type="text" name="aAngle" id="aAngle" class="textInput" value="0" onClick="this.select();"/>
+					</div>
+-->
 				</div>
+
+				<div class="grid_12">
+					<div class="grid_12 article" id="darkBackground">
+						<label for="bSide">b side length: </label>
+						<input type="text" name="bSide" id="bSide" class="textInput" value="0" onClick="this.select();"/>
+					</div>
+<!--
+					<div class="inputContainer">
+						<label for="bAngle">B angle measure: </label>
+						<input type="text" name="bAngle" id="bAngle" class="textInput" value="0" onClick="this.select();"/>
+					</div>
+-->
+				</div>
+
+				<div class="grid_12">
+					<div class="grid_12 article" id="darkBackground">
+						<label for="cSide">c side length: </label>
+						<input type="text" name="cSide" id="cSide" class="textInput" value="0" onClick="this.select();"/>
+					</div>
+<!--
 				<div class="inputContainer">
 					<label for="cAngle">C angle measure: </label>
 					<input type="text" name="cAngle" id="cAngle" class="textInput" value="0" onClick="this.select();"/>
 				</div>
+-->
+				</div>
+
+				<div class="inputRow">
+					<button onclick="iterate()">Solve</button>
+				</div>
 			</div>
 
-			<div class="inputRow">
-				<button onclick="iterate()">Solve</button>
+			<div class="grid_12">
+
+				<p>Try moving your mouse over the table!</p>
+
+				<table class="displayTable">
+					<tr>
+						<th class="tableHead">Vertex</th>
+						<th class="tableHead">Opposite Side Length</th>
+						<th class="tableHead">Angle Measure &deg</th>
+					</tr>
+					<tr class="displayRow">
+						<td class="displayItem">A:</td>
+						<td class="displayItem" id="asMeasure"></td>
+						<td class="displayItem" id="aaMeasure"></td>
+					</tr>
+					<tr class="displayRow">
+						<td class="displayItem">B:</td>
+						<td class="displayItem" id="bsMeasure"></td>
+						<td class="displayItem" id="baMeasure"></td>
+					</tr>
+					<tr class="displayRow">
+						<td class="displayItem">C:</td>
+						<td class="displayItem" id="csMeasure"></td>
+						<td class="displayItem" id="caMeasure"></td>
+					</tr>
+				</table>
+
 			</div>
-		</div>
 
-		<br /><br /><br />
-
-
-		<div class="holder">
-
-			<table class="displayTable">
-				<tr>
-					<th class="tableHead">Vertex</th>
-					<th class="tableHead">Opposite Side Length</th>
-					<th class="tableHead">Angle Measure &deg</th>
-				</tr>
-				<tr class="displayRow">
-					<td class="displayItem">A:</td>
-					<td class="displayItem" id="asMeasure"></td>
-					<td class="displayItem" id="aaMeasure"></td>
-				</tr>
-				<tr class="displayRow">
-					<td class="displayItem">B:</td>
-					<td class="displayItem" id="bsMeasure"></td>
-					<td class="displayItem" id="baMeasure"></td>
-				</tr>
-				<tr class="displayRow">
-					<td class="displayItem">C:</td>
-					<td class="displayItem" id="csMeasure"></td>
-					<td class="displayItem" id="caMeasure"></td>
-				</tr>
-			</table>
+			<div id="footer" class="grid_12">
+				<p>&copy Copyright 2018</p>
+				<p>All Rights Reserved.</p>
+			</div>
 
 		</div>
 
